@@ -55,27 +55,6 @@ export function initDarkMode() {
     }
 }
 
-// Toggle dark mode
-const toggleDarkMode = document.getElementById("toggle-dark-mode");
-if (toggleDarkMode) {
-    toggleDarkMode.addEventListener("change", function () {
-        if (this.checked) {
-            document.documentElement.classList.add("dark-mode");
-            localStorage.setItem("theme", "dark");
-        } else {
-            document.documentElement.classList.remove("dark-mode");
-            localStorage.setItem("theme", "light");
-        }
-    });
-
-    // Kiểm tra trạng thái dark theme
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-        document.documentElement.classList.add("dark-mode");
-        toggleDarkMode.checked = true;
-    }
-}
-
 // Hàm load sidebar
 export function loadSidebar() {
     const sidebarContainer = document.getElementById("sidebar-container");
@@ -90,7 +69,31 @@ export function loadSidebar() {
         .catch(error => console.error('Error loading sidebar:', error));
 }
 
-// LẮNG NGHE SỰ KIỆN DOM
+
 document.addEventListener('DOMContentLoaded', function () {
+    // Toggle dark mode
+    const toggleDarkMode = document.getElementById("toggle-dark-mode");
+    if (toggleDarkMode) {
+        toggleDarkMode.addEventListener("change", function () {
+            if (this.checked) {
+                document.documentElement.classList.add("dark-mode");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.documentElement.classList.remove("dark-mode");
+                localStorage.setItem("theme", "light");
+            }
+        });
+
+        // Kiểm tra trạng thái dark theme
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark-mode");
+            toggleDarkMode.checked = true;
+        }
+    }
+
+    // LẮNG NGHE SỰ KIỆN DOM
+    // document.addEventListener('DOMContentLoaded', function () {
     loadSidebar();
 })
+
