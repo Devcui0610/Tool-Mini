@@ -1,0 +1,27 @@
+html {
+    --body-bg-color: #dcfefd;
+
+    --sidebar-bg: #01a3a4;
+    --content-bg: #6cd3d3;
+
+    /* Lịch */
+    --bg-days-calendar: #f1f1f1;
+    --bg-weekdays-calendar: #e1edec;
+    --border-bottom-weekdays-calendar: #dcdcdc;
+    --color-lunar: #1c504a;
+    --color-today: #fff;
+    --bg-today: #10b0ad;
+    --color-day-pre: rgba(0, 0, 0, 0.43);
+
+    /* Input Select */
+    --bg-select: #f1f1f1;
+    --border-input: #ccc;
+    --bg-progress: #ddd;
+
+    /* Icon Button */
+    --bg-icon-btn: #11473e;
+
+    /* Report Sheet */
+    --bg-report-left: #01a3a4;
+    --bg-report-right: #ffe259;
+}

@@ -1,0 +1,186 @@
+/* SHEET TABLE */
+.container-api-table {
+    /* background: #d2dae2; */
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+input[type="color"] {
+    border-radius: 50%;
+    padding: 0;
+    border: 14px solid #14a085;
+    width: 27px;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls input {
+    height: 33px;
+    padding: 0 10px;
+    margin-right: 10px;
+    border: 1px solid #4b706e;
+    border-radius: 5px;
+    width: 69px;
+}
+
+.custom-col-1 {
+    display: flex;
+    align-items: center;
+}
+
+.custom-col-1 input[type="color"] {
+    border-radius: 50%;
+    padding: 0;
+    width: 35px;
+}
+
+#backgroundColorPicker {
+    border: 14px solid #ff3f34;
+}
+#textColorPicker {
+    border: 14px solid #ffd32a;
+}
+
+.controls .input-custom {
+    width: 120px;
+}
+
+.controls button {
+    padding: 0 15px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #16a085;
+    color: white;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.control-input-btn {
+    display: flex;
+    align-items: center;
+}
+
+.btn-icon-awesome {
+    padding: 0 11px;
+    font-size: 20px;
+}
+
+.controls button:hover {
+    background-color: #13856b;
+}
+
+.table-container {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #16a085;
+    color: white;
+}
+
+.editable {
+    background-color: #e8f6f3;
+    outline: none;
+    color: #000;
+}
+
+.resizable {
+    resize: both;
+    overflow: hidden;
+}
+
+.resizable::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.center-buttons {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.center-buttons button {
+    margin-right: 5px;
+    flex: 1;
+    min-height: 30px;
+    border:1px solid #4b706e;
+    border-bottom: none;
+    border-radius: 999px;
+    transition: background 0.3s;
+}
+
+.center-buttons button:hover {
+    background: #ffd32a;
+    cursor: pointer;
+}
+
+.wrap-body-table {
+    flex: 1;
+}
+
+.row-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.row-control {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 25px !important;
+}
+/* SHEET TABLE */

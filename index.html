@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tool Mini</title>
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <!-- DARK THEME CSS -->
+        <link rel="stylesheet" href="css/dark.css" />
+        <!-- LIGHT THEME CSS -->
+        <link rel="stylesheet" href="css/light.css" />
+        <!-- STYLE CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- SIDEBAR CSS -->
+        <link rel="stylesheet" href="css/sidebar.css" />
+        <!-- TRELLO CSS -->
+        <link rel="stylesheet" href="css/trello.css" />
+        <!-- FORMAT TEXT CSS -->
+        <link rel="stylesheet" href="css/formar-text.css" />
+        <!-- SHEET TABLE CSS -->
+        <link rel="stylesheet" href="css/sheet-table.css" />
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <!-- Lịch -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/vi.min.js"></script>
+        <script src="https://unpkg.com/moment-lunar@0.0.3/moment-lunar.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="header-container"></div>
+
+        <div class="wrap-container">
+            <div id="sidebar-home" class="sidebar-home">
+                <!-- Sidebar -->
+                <div id="sidebar-container"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div id="content-home" class="content-home">
+                <!-- FormatText -->
+                <div class="wrap-formatText">
+                    <div class="editor">
+                        <div class="toolbar">
+                            <button onclick="boldSelection()"><i class="fas fa-bold btn-icon"></i></button>
+                            <button onclick="italicSelection()"><i class="fas fa-italic btn-icon"></i></button>
+                            <button onclick="addNewLineToEnd()">
+                                <i class="fas fa-plus"></i><span class="ml5"> Add Line</span>
+                            </button>
+                            <button onclick="restoreLastDeletedLine()">
+                                <i class="fas fa-undo"></i><span class="ml5"> Restore</span>
+                            </button>
+                            <button onclick="deleteAllLines()">
+                                <i class="fas fa-eraser"></i><span class="ml5"> Delete All</span>
+                            </button>
+                            <button onclick="showClearCacheModal()">
+                                <i class="fas fa-trash-alt"></i><span class="ml5"> Cache</span>
+                            </button>
+                        </div>
+                        <div id="inputContainer" class="inputContainer">
+                            <div class="line">
+                                <div class="line-buttons">
+                                    <button onclick="boldLine(this)"><i class="fas fa-bold"></i></button>
+                                    <button onclick="italicLine(this)"><i class="fas fa-italic"></i></button>
+                                    <button onclick="addAsteriskLine(this)"><i class="fas fa-asterisk"></i></button>
+                                    <button onclick="addDisc(this)"><i class="fas fa-circle"></i></button>
+                                    <button onclick="addLineBelow(this)"><i class="fas fa-plus"></i></button>
+                                    <button onclick="deleteLine(this)"><i class="fas fa-trash"></i></button>
+                                </div>
+                                <div class="line-content" contenteditable="true" oninput="updateOutput()"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="output-container">
+                        <button class="copy-button" onclick="copyToClipboard()"><i class="fas fa-copy"></i></button>
+                        <button class="sale-backup-button" onclick="showBackupModal()">
+                            <i class="fas fa-save"></i>
+                        </button>
+                        <div class="backup-buttons" id="backupButtons"></div>
+                        <div class="line-separate"></div>
+                        <div class="output" contenteditable="true" id="outputText" class="outputText"></div>
+                    </div>
+                </div>
+
+                <div id="backupModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-title-wrap">
+                            <h2 class="modal-title">Nhập Tên File Backup</h2>
+                        </div>
+                        <input type="text" id="backupName" placeholder="Tên File Backup" />
+                        <button onclick="saveBackup()">Lưu Lại</button>
+                    </div>
+                </div>
+
+                <div id="clearCacheModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-title-wrap">
+                            <h2 class="modal-title">Tuỳ Chọn Xoá Dữ Liệu Cache</h2>
+                        </div>
+                        <label class="modal-label-wrap">
+                            <input type="checkbox" id="keepBackups" class="keepBackups" checked />
+                            <span class="modal-label">Không Xoá Dữ Liệu Backup</span>
+                        </label>
+                        <button onclick="performClearCache()">Xoá Cache</button>
+                    </div>
+                </div>
+
+                <div id="backupOptionsModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-title-wrap" style="top: -50px">
+                            <h2 class="modal-title">Mở Hoặc Xoá File Backup</h2>
+                        </div>
+                        <div>
+                            <button id="openBackupButton">Mở Ngay</button>
+                            <button id="deleteBackupButton">Xoá Vĩnh Viễn</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End FormatText -->
+            </div>
+        </div>
+
+        <!-- Gọi JS Header -->
+        <script type="module" src="js/loadHeader.js"></script>
+
+        <!-- Gọi JS loadSidebar -->
+        <script type="module" src="js/loadSidebar.js"></script>
+
+        <!-- Gọi JS Sidebar -->
+        <script type="module" src="js/sidebar.js"></script>
+
+        <!-- Gọi JS Format Text -->
+        <script src="js/format-text.js"></script>
+
+        <!-- Gọi JS Main -->
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

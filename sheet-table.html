@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tool Mini</title>
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+
+        <!-- DARK THEME CSS -->
+        <link rel="stylesheet" href="css/dark.css" />
+
+        <!-- LIGHT THEME CSS -->
+        <link rel="stylesheet" href="css/light.css" />
+
+        <!-- STYLE CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- SIDEBAR CSS -->
+        <link rel="stylesheet" href="css/sidebar.css" />
+
+        <!-- TRELLO CSS -->
+        <!-- <link rel="stylesheet" href="css/trello.css" /> -->
+
+        <!-- FORMAT TEXT CSS -->
+        <!-- <link rel="stylesheet" href="css/formar-text.css" /> -->
+
+        <!-- SHEET TABLE CSS -->
+        <link rel="stylesheet" href="css/sheet-table.css" />
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <!-- Lịch -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/vi.min.js"></script>
+        <script src="https://unpkg.com/moment-lunar@0.0.3/moment-lunar.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="header-container"></div>
+
+        <div class="wrap-container">
+            <div id="sidebar-home" class="sidebar-home">
+                <!-- Sidebar -->
+                <div id="sidebar-container"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div id="content-home" class="content-home">
+                <!-- Sheet Table -->
+                <div class="container-api-table">
+                    <div class="controls">
+                        <div class="control-input-btn">
+                            <input type="text" id="range1" placeholder="ĐG BLV!A1:O50" value="ĐG BLV!A1:O50" />
+                            <button id="fetchData1" class="btn-icon-awesome">
+                                <i class="fas fa-thumbs-up"></i>
+                            </button>
+                        </div>
+                        <div class="control-input-btn">
+                            <input type="text" id="range2" placeholder="Vị Trí Sheet" value="SCREEN!A1:I" />
+                            <button id="fetchData2" class="btn-icon-awesome">
+                                <i class="fas fa-calendar-check"></i>
+                            </button>
+                        </div>
+                        <div class="control-input-btn">
+                            <input class="input-custom" type="text" id="range3" placeholder="Vị Trí Sheet" />
+                            <button id="fetchData3" class="btn-icon-awesome">
+                                <i class="fas fa-sign-in-alt"></i>
+                            </button>
+                        </div>
+                        <!-- <button id="clearCache" class="btn-icon-awesome">
+                            <i class="fas fa-eraser"></i>
+                        </button> -->
+                        <button id="toggleResize" class="btn-icon-awesome">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </button>
+                        <input
+                            type="number"
+                            id="scale"
+                            placeholder="Chỉ số nét ảnh chụp"
+                            step="0.1"
+                            min="1"
+                            value="3.9"
+                        />
+                        <button id="capture" class="btn-icon-awesome">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                        <div class="custom-col-1">
+                            <input type="color" id="textColorPicker" />
+                            <input type="color" id="backgroundColorPicker" />
+                            <button id="toggleBold" class="btn-icon-awesome">
+                                <i class="fas fa-bold"></i>
+                            </button>
+                        </div>
+                        <!-- <div class="input-api-key-id">
+                            <input type="text" id="apiKeyInput" placeholder="Nhập API Key" />
+                            <input type="text" id="spreadsheetIdInput" placeholder="Nhập Spreadsheet ID" />
+                            <button id="saveApiKeyAndId">Lưu</button>
+                            <button id="clearApiKeyAndId">Xóa</button>
+                        </div> -->
+                    </div>
+                    <div class="table-container" id="tableContainer">
+                        <div class="wrap-body-table">
+                            <div class="center-buttons" id="centerButtons"></div>
+                            <table id="dataTable">
+                                <!-- Data will be injected here -->
+                            </table>
+                        </div>
+                        <div class="row-controls" id="rowControls"></div>
+                    </div>
+                </div>
+                <!-- End Sheet Table -->
+            </div>
+        </div>
+        <!-- Framework Chụp Màn Hình -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+        <!-- Gọi JS Header -->
+        <script type="module" src="js/loadHeader.js"></script>
+
+        <!-- Gọi JS loadSidebar -->
+        <script type="module" src="js/loadSidebar.js"></script>
+
+        <!-- Gọi JS Sidebar -->
+        <script type="module" src="js/sidebar.js"></script>
+
+        <!-- Gọi JS SHEET TABLE -->
+        <script type="module" src="js/sheet-table.js"></script>
+    </body>
+</html>

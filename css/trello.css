@@ -1,0 +1,233 @@
+.trello {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.trello-inner{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.board-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 5px;
+    row-gap: 24px;
+    width: 100%;
+}
+
+.trello-board-container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.list,
+.archive,
+.activity-log {
+    background:#10a4a2;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 300px;
+    min-height: 350px;
+    box-shadow: 0px 5px 36px 8px rgba(0,0,0,0.1);
+    margin: 0 10px;
+    flex-shrink: 0;
+    flex-grow: 0; /* Ngăn chặn phần tử bị kéo dài */
+    flex-basis: 300px;
+    overflow: hidden;
+}
+.list h3,
+.archive h3,
+.activity-log h3 {
+    height: 37px;
+    line-height: 37px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background: #ffc148;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.26);
+    margin: -10px -10px 0 -10px;
+    padding: 0px 14px;
+    color: #ffffff;
+}
+.activity-log{
+    display: none;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    color:#000;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    padding: 7px 10px;
+}
+.card:hover {
+    background: #d3d4d6;
+}
+.add-card-btn,
+.add-list-btn {
+    display: flex;
+    margin: 20px auto 0;
+    padding: 5px 10px;
+    background: #097877;
+    background-image: linear-gradient(90deg, #097877 0%, #a3dfd6 55%, #097877 100%);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: scale 0.3s;
+}
+.add-card-btn:hover,
+.add-list-btn:hover {
+    scale: 1.05;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.69);
+    padding-top: 60px;
+}
+
+.modal-content-trello {
+    background-color: #e5e5e5;
+    color:#000;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.modal-trello-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-trello-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-trello-row-top {
+    display: flex;
+    background: #118a79;
+    margin: -20px -20px 0 -20px;
+    padding: 10px 20px;
+}
+
+.row-btn {
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.row-btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: 87px;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 5px;
+    background: #108a79;
+    transition: background 0.3s;
+}
+
+.row-btn button:hover {
+    background: #0c6f62;
+}
+
+.modal-trello-row textarea,
+.modal-trello-row input {
+    width: 77% !important;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 1px solid #108a79;
+    margin-left: 10px;
+}
+
+.modal-trello-row textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.modal-trello-row label {
+    color: #11473f;
+    font-weight: 600;
+}
+
+.modal-trello-row h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.label {
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.activity-log ul {
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.activity-log li {
+    background: #e3e4e6;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+}
+.complete-btn {
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}

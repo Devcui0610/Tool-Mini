@@ -1,0 +1,402 @@
+/* SIDEBAR */
+.sidebar-home {
+    display: flex;
+    flex-direction: column;
+    width: 337px;
+    background-color: var(--sidebar-bg);
+    transition: width 0.3s;
+}
+
+.sidebar-home.hidden-home {
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar-home-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 7px;
+    width: 100%;
+}
+
+/* END SIDEBAR */
+
+/* CONTENT HOME PAGE */
+.content-home {
+    width: calc(100% - 337px);
+    background: var(--content-bg);
+    min-height: 100vh;
+    transition: margin-left 0.3s;
+    flex-grow: 1;
+}
+
+.content-home.full-width {
+    margin-left: 0;
+}
+
+/* END CONTENT HOME PAGE */
+
+/* SIDEBAR - CLOCK */
+/* CSS CLOCK */
+.clock {
+    display: flex;
+    gap: 7px;
+    width: 100%;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+.clock div {
+    position: relative;
+    flex: 33.33333%;
+    color: #000;
+}
+
+.clock div p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2ed6f;
+    z-index: 1;
+    font-size: 63px;
+    padding-top: 5px;
+    border: none;
+    box-shadow: 20px 25px 36px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clock div p:first-child {
+    border-radius: 20px 20px 0 0;
+}
+
+.clock div p:last-child {
+    font-size: 18px;
+    height: 35px;
+    background-color: #f4e04d;
+    border-radius: 0 0 20px 20px;
+    padding-top: 0;
+}
+
+.clock div:last-child p {
+    background-color: #7a15a2;
+    color: white;
+}
+
+.clock div:last-child p:last-child {
+    background-color: #510f6b;
+    color: white;
+}
+
+/* END CSS CLOCK */
+
+/* CSS CALENDAR */
+.calendar {
+    max-width: 330px;
+    height: 357px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.calendar .month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #097877;
+    background-image: linear-gradient(90deg, #152e2e 0%, #55ffe6 55%, #152e2e 100%);
+    text-align: center;
+    color: #000;
+}
+
+.calendar .month h1 {
+    flex-grow: 1;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.calendar .month p {
+    font-weight: 300;
+    margin: 0;
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+}
+
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+    opacity: 0.8;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: var(--bg-weekdays-calendar);
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-bottom-weekdays-calendar);
+    color: #000;
+}
+
+.weekdays div {
+    width: 14.28%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: var(--bg-days-calendar);
+}
+
+.days div {
+    width: 14.28%;
+    height: 42px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    transition: background 0.3s, color 0.3s, border-radius 0.3s;
+    cursor: pointer;
+    /* color: #000; */
+}
+
+.days .previous-days,
+.days .next-days {
+    color: var(--color-day-pre);
+}
+
+.days .today {
+    background: var(--bg-today);
+    color: var(--color-today);
+    border-radius: 50%;
+}
+
+.days .today:hover {
+    background: #0b706d;
+}
+
+.days div:not(.today):hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.days .lunar {
+    font-size: 10px;
+    margin-top: 5px;
+    color: var(--color-lunar);
+}
+
+.prev,
+.next {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+    color: #ddd;
+}
+
+/* END CSS CALENDAR */
+
+/* TOOLTIP */
+.tooltip {
+    width: 100%;
+    background: var(--bg-days-calendar);
+    padding: 12px;
+    margin-top: 7px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.note-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.note-input textarea {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #000;
+    border: 1px solid var(--border-input);
+    border-radius: 5px;
+    resize: none;
+}
+
+.note-input select {
+    color: #000;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-input);
+    border-radius: 5px;
+}
+
+.note-input button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.note-input button:hover {
+    background-color: #0056b3;
+}
+
+.note {
+    background: var(--bg-days-calendar);
+    color: #000;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-input);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note p {
+    margin: 0;
+}
+
+.note input[type="text"] {
+    width: calc(100% - 50px);
+    padding: 5px;
+    border: none;
+    background: var(--bg-days-calendar);
+    font-size: 16px;
+}
+
+.note input[type="text"]:focus {
+    outline: none;
+}
+
+.note .buttons {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.note .buttons button {
+    padding: 2px 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.note .buttons .delete-note {
+    background: red;
+    color: white;
+}
+
+.note .buttons .delete-note:hover {
+    background: darkred;
+}
+
+.note .buttons .edit-note {
+    background: orange;
+    color: white;
+}
+
+.note .buttons .edit-note:hover {
+    background: darkorange;
+}
+
+.note .buttons .complete-note {
+    background: green;
+    color: white;
+}
+
+.note .buttons .complete-note:hover {
+    background: darkgreen;
+}
+
+.note.completed {
+    background-color: #d4edda;
+}
+
+.progress {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.progress p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: var(--bg-progress);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 20px;
+    background-color: #28a745;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    border-radius: 5px;
+}
+
+#notes-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.search {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.search input {
+    width: 60%;
+    padding: 10px;
+    color: #000;
+    border: 1px solid var(--border-input);
+    border-radius: 5px;
+}
+
+.search select {
+    color: #000;
+    width: 40%;
+    padding: 10px;
+    border: 1px solid var(--border-input);
+    border-radius: 5px;
+}
+
+/* END TOOLTIP */

@@ -1,0 +1,80 @@
+<div class="sidebar-home-inner">
+    <div class="sidebar-home-inner">
+        <!-- Clock -->
+        <div class="clock">
+            <div>
+                <p class="hours">00</p>
+                <p>Giờ</p>
+            </div>
+            <div>
+                <p class="minutes">00</p>
+                <p>Phút</p>
+            </div>
+            <div>
+                <p class="seconds">00</p>
+                <p>Giây</p>
+            </div>
+        </div>
+
+        <!-- Calendar -->
+        <div class="calendar">
+            <div class="month">
+                <div class="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="content">
+                    <h1>Tháng 5</h1>
+                    <p>23 Tháng 5 Năm 2022</p>
+                </div>
+                <div class="next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="weekdays">
+                <div>CN</div>
+                <div>Hai</div>
+                <div>Ba</div>
+                <div>Tư</div>
+                <div>Năm</div>
+                <div>Sáu</div>
+                <div>Bảy</div>
+            </div>
+            <div class="days"></div>
+        </div>
+        <div class="tooltip">
+            <div class="search">
+                <input type="text" id="search-bar" placeholder="Tìm kiếm ghi chú..." />
+                <select id="filter-category">
+                    <option value="all">Tất cả</option>
+                    <option value="work">Công việc</option>
+                    <option value="personal">Cá nhân</option>
+                    <option value="study">Học tập</option>
+                </select>
+            </div>
+            <div class="note-input">
+                <textarea id="note-content" placeholder="Nhập ghi chú của bạn ở đây..."></textarea>
+                <select id="note-category">
+                    <option value="work">Công việc</option>
+                    <option value="personal">Cá nhân</option>
+                    <option value="study">Học tập</option>
+                </select>
+                <button id="add-note">Thêm Ghi Chú</button>
+            </div>
+            <div id="notes-list"></div>
+            <div class="progress">
+                <p>Tiến Trình Hoàn Thành Task</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="work-progress">
+                        <div style="width: 0%">0%</div>
+                    </div>
+                    <div class="progress-bar" id="personal-progress">
+                        <div style="width: 0%">0%</div>
+                    </div>
+                    <div class="progress-bar" id="study-progress">
+                        <div style="width: 0%">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

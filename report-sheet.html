@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tool Mini</title>
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+
+        <!-- DARK THEME CSS -->
+        <link rel="stylesheet" href="css/dark.css" />
+
+        <!-- LIGHT THEME CSS -->
+        <link rel="stylesheet" href="css/light.css" />
+
+        <!-- STYLE CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- SIDEBAR CSS -->
+        <link rel="stylesheet" href="css/sidebar.css" />
+
+        <!-- REPORT CSS -->
+        <link rel="stylesheet" href="css/report-sheet.css" />
+
+        <!-- FORMAT TEXT CSS -->
+        <!-- <link rel="stylesheet" href="css/formar-text.css" /> -->
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <!-- Lịch -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/vi.min.js"></script>
+        <script src="https://unpkg.com/moment-lunar@0.0.3/moment-lunar.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="header-container"></div>
+
+        <div class="wrap-container">
+            <div id="sidebar-home" class="sidebar-home">
+                <!-- Sidebar -->
+                <div id="sidebar-container"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div id="content-home" class="content-home">
+                <!-- Report Sheet -->
+                <div class="setup-live">
+                    <div class="left-panel-api">
+                        <h2 class="title-h2">Input API</h2>
+                        <div class="report-sheet-row">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    id="rangeInputApiRight"
+                                    placeholder="Tab Sheet!?:?"
+                                    value="REPORT!I4:I4"
+                                />
+                                <button id="fetchButtonApiRight" class="report-btn">Lấy Data</button>
+                            </div>
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    id="rangeInput"
+                                    placeholder="Tab Sheet!?:?"
+                                    value="DATE TO BLV!J?:J?"
+                                />
+                                <button id="fetchButton" class="report-btn">Lấy Data</button>
+                            </div>
+                        </div>
+                        <div class="input-list-api">
+                            <div id="input-container-api" class="input-container-api"></div>
+                        </div>
+                        <div id="data-container-api"></div>
+                    </div>
+                    <div class="right-panel-api">
+                        <div class="row-flex">
+                            <h2 class="title-h2">Data Output</h2>
+                            <button id="copyButton-api" class="copyButton-api">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div id="result-api" contenteditable="true"></div>
+                    </div>
+                </div>
+                <!-- End Report Sheet -->
+            </div>
+        </div>
+
+        <!-- Gọi JS Header -->
+        <script type="module" src="js/loadHeader.js"></script>
+
+        <!-- Gọi JS loadSidebar -->
+        <script type="module" src="js/loadSidebar.js"></script>
+
+        <!-- Gọi JS Sidebar -->
+        <script type="module" src="js/sidebar.js"></script>
+
+        <!-- Gọi JS Format Text -->
+        <!-- <script src="js/format-text.js"></script> -->
+
+        <!-- Gọi JS TRELLO -->
+        <script type="module" src="js/report-sheet.js"></script>
+
+        <!-- Gọi JS Main -->
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

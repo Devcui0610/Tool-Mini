@@ -1,0 +1,109 @@
+.setup-live {
+    display: flex;
+    padding: 20px;
+}
+.left-panel-api,
+.right-panel-api {
+    padding: 20px;
+    height: calc(100vh - 80px);
+}
+.left-panel-api {
+    width: 35%;
+    background-color: var(--bg-report-left);
+    border-radius: 20px 0 0 20px;
+}
+.input-list-api {
+    height: calc(100% - 165px);
+    overflow-y: auto;
+}
+.right-panel-api {
+    width: 65%;
+    background-color: var(--bg-report-right);
+    /* color: #000; */
+    border-radius: 0 20px 20px 0;
+    position: relative;
+}
+#result-api {
+    outline: none;
+    height: calc(100vh - 180px);
+    overflow: auto;
+    border: 1px solid #11473e;
+    border-radius: 14px;
+    padding: 15px;
+}
+#result-api div {
+    white-space: pre-wrap;
+}
+#data-container-api {
+    display: none;
+}
+.row-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.title-h2 {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 8px 12px;
+    color: #2b2828;
+    text-shadow: 4px 4px 5px rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    background: #187162;
+    background: linear-gradient(214deg, #187162 0%, #f1c40f 80%);
+    background: -webkit-linear-gradient(214deg, #187162 0%, #f1c40f 80%);
+    background: -moz-linear-gradient(214deg, #187162 0%, #f1c40f 80%);
+}
+/* Input API */
+.input-container-api {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.input-group {
+    margin-top: 20px;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    min-width: 200px;
+    flex: 1;
+}
+.input-group input {
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+}
+.btn-input {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-input:hover {
+    background: #f1c40f;
+}
+.copyButton-api {
+    font-size: 20px;
+    transition: scale 0.3s;
+}
+.copyButton-api:hover {
+    scale: 1.1;
+}
+
+.report-btn {
+    background: #f1c40f;
+    color: #000;
+    padding: 5px 12px;
+    text-wrap: nowrap;
+    border-radius: 6px;
+}
