@@ -247,7 +247,7 @@
     content: "";
     width: 15px;
     height: 6px;
-    rotate: 313deg;
+    transform: rotate(313deg);
     border-width: 0 0 3px 3px;
     border-color: #fff;
     border-style: solid;
