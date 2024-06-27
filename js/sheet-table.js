@@ -689,6 +689,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Không tìm thấy phần tử toggle-btn-home hoặc sidebar.');
         }
 
+        // loadHeader();
+
     });
 
     // console.log('DOMContentLoaded event triggered');
