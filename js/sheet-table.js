@@ -1,5 +1,5 @@
 import { saveApiKeyAndSpreadsheetId, getApiKeyAndSpreadsheetId, fetchData } from './api/api.js';
-import { loadHeader } from './loadHeader.js';
+// import { loadHeader } from './loadHeader.js';
 
 // KHỞI TẠO BIẾN
 // Biến tạo cặp input và button lấy dữ liệu từ sheet
@@ -617,7 +617,7 @@ function saveColumnAlignments() {
 
 // Lắng nghe sự kiện của trang HOME trong việc xử lý cache và tải lại trang
 document.addEventListener("DOMContentLoaded", () => {
-    loadHeader();
+    // loadHeader();
 
     document.addEventListener('headerLoaded', () => {
         const apiKeyInput = document.getElementById('apiKeyInput');
@@ -673,21 +673,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
        
 
-        if (toggleDarkMode) {
-            toggleDarkMode.addEventListener('change', () => {
-                document.body.classList.toggle('dark-mode');
-            });
-        } else {
-            console.error('Không tìm thấy phần tử toggle-dark-mode.');
-        }
+        // if (toggleDarkMode) {
+        //     toggleDarkMode.addEventListener('change', () => {
+        //         document.body.classList.toggle('dark-mode');
+        //     });
+        // } else {
+        //     console.error('Không tìm thấy phần tử toggle-dark-mode.');
+        // }
 
-        if (toggleSidebarButton && sidebar) {
-            toggleSidebarButton.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-        } else {
-            console.error('Không tìm thấy phần tử toggle-btn-home hoặc sidebar.');
-        }
+        // if (toggleSidebarButton && sidebar) {
+        //     toggleSidebarButton.addEventListener('click', () => {
+        //         sidebar.classList.toggle('active');
+        //     });
+        // } else {
+        //     console.error('Không tìm thấy phần tử toggle-btn-home hoặc sidebar.');
+        // }
 
         // loadHeader();
 

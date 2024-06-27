@@ -109,7 +109,7 @@ export function loadSidebar() {
             setTimeout(() => {
                 initToggleButton();
                 initDarkMode();
-            }, 0); // Khoảng trễ 500ms
+            }, 1000); // Khoảng trễ 500ms
         })
         .catch(error => console.error('Error loading sidebar:', error));
 }
