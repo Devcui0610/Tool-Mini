@@ -693,8 +693,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // console.log('DOMContentLoaded event triggered');
-
     //Hàm tải dữ liệu từ Local Storage
     function loadCache() {
         const savedRange1 = localStorage.getItem("range1");
